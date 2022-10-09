@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('absensi', function (Blueprint $table) {
+        Schema::create('absensis', function (Blueprint $table) {
             $table->id();
+            $table->string('nim');
+            $table->string('status');
             $table->timestamps();
         });
     }
