@@ -13,7 +13,7 @@ class AbsensiController extends Controller {
      * @return void
      */
     public function index() {
-        $absensis = Absensi::latest()->get();
+        $absensis = Absensi::latest()->with('user')->get();
 
         return response()->json([
             'success' => true,
@@ -29,7 +29,7 @@ class AbsensiController extends Controller {
      * @return void
      */
     public function show($id) {
-        $absensi = Absensi::findOrfail($id);
+        $absensi = Absensi::findOrfail($id)->with('user')->first();
 
         return response()->json([
             'success' => true,

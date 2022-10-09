@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('absensis', function (Blueprint $table) {
-            $table->id();
-            $table->string('nim')->nullable();
-            $table->string('status');
-            $table->timestamps();
+        Schema::table('absensis', function (Blueprint $table) {
+            $table->foreign('nim')->references('nim')->on('users')->onDelete('set null');
         });
     }
 
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('absensi');
+        //
     }
 };

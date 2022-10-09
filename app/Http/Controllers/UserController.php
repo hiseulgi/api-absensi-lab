@@ -29,7 +29,7 @@ class UserController extends Controller {
      * @return void
      */
     public function show($id) {
-        $user = User::findOrfail($id);
+        $user = User::findOrfail($id)->with('absensi')->first();
 
         return response()->json([
             'success' => true,
