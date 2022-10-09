@@ -12,4 +12,9 @@ class Absensi extends Model
     protected $fillable = [
         'nim', 'status'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'nim', 'nim');
+    }
 }
