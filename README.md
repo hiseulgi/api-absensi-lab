@@ -54,10 +54,10 @@ php artisan serve
 
 * **Data Params**
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| `nim` | `string` | **Required**. NIM Mahasiswa |
-| `status` | `string` | **Required**. Status Absensi |
+  | Parameter | Type | Description |
+  | :--- | :--- | :--- |
+  | `nim` | `string` | **Required**. NIM Mahasiswa |
+  | `status` | `string` | **Required**. Status Absensi |
 
 * **Response**
   * **Code:** `201` or `409`
