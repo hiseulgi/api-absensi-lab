@@ -48,9 +48,9 @@ php artisan serve
 
 * **Method**
 
-```http
-POST /absen
-```
+  ```http
+  POST /absen
+  ```
 
 * **Data Params**
 
@@ -60,7 +60,7 @@ POST /absen
 | `status` | `string` | **Required**. Status Absensi |
 
 * **Response**
-  * **Code:** 201 or 409
+  * **Code:** `201` or `409`
   * **Content:**
     ```javascript
     {
@@ -74,16 +74,16 @@ POST /absen
 
 * **Method**
 
-```http
-GET /usernim
-```
+  ```http
+  GET /usernim
+  ```
 
 * **Data Params**
 
   None
 
 * **Response**
-  * **Code:** 200
+  * **Code:** `200`
   * **Content:**
     ```javascript
     {
