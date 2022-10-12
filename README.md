@@ -43,16 +43,54 @@ php artisan serve
 
 ## API Endpoint
 
-### User
-- GET All   : `http://127.0.0.1:8000/api/user`
-- GET by id : `http://127.0.0.1:8000/api/user/{id}`
-- POST      : `http://127.0.0.1:8000/api/user/`
-- PUT       : `http://127.0.0.1:8000/api/user/{id}`
-- DELETE    : `http://127.0.0.1:8000/api/user/{id}`
+1. **POST /absen**
+----
+Mengirim data NIM dan status absensi ketika wajah mahasiswa berhasil dideteksi.
 
-### Absensi
-- GET All   : `http://127.0.0.1:8000/api/absensi`
-- GET by id : `http://127.0.0.1:8000/api/absensi/{id}`
-- POST      : `http://127.0.0.1:8000/api/absensi/`
-- PUT       : `http://127.0.0.1:8000/api/absensi/{id}`
-- DELETE    : `http://127.0.0.1:8000/api/absensi/{id}`
+* **Method**
+
+```http
+POST /absen
+```
+
+* **Data Params**
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `nim` | `string` | **Required**. NIM Mahasiswa |
+| `status` | `string` | **Required**. Status Absensi |
+
+* **Response**
+  * **Code:** 201 or 409
+  * **Content:**
+    ```javascript
+    {
+      'success' => bool,
+      'message' => string
+    }
+    ```
+
+2. **GET /usernim**
+----
+Mengambil seluruh data nama dan nim dari user.
+
+* **Method**
+
+```http
+GET /usernim
+```
+
+* **Data Params**
+
+None
+
+* **Response**
+  * **Code:** 200
+  * **Content:**
+    ```javascript
+    {
+      'success' => bool,
+      'message' => string,
+      'data'    => string
+    }
+    ```
