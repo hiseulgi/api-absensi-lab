@@ -160,4 +160,13 @@ class UserController extends Controller {
             'message' => 'Data user tidak ditemukan!',
         ], 404);
     }
+
+    public function user_nim() {
+        $users = User::latest()->get()->pluck('nama', 'nim');
+        return response()->json([
+            'success' => true,
+            'message' => 'List Data User',
+            'data'    => $users
+        ], 200);
+    }
 }

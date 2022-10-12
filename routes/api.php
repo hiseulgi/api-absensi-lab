@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::resource('user', UserController::class);
 Route::resource('absensi', AbsensiController::class);
+Route::get('usernim', [UserController::class, 'user_nim']);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
