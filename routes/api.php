@@ -15,8 +15,15 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::resource('user', UserController::class);
-Route::resource('absensi', AbsensiController::class);
+
+// * CRUD user dan absensi
+// Route::resource('user', UserController::class);
+// Route::resource('absensi', AbsensiController::class);
+
+// * POST ABSEN jika wajah user terdeteksi
+Route::post('absen', [AbsensiController::class, 'store']);
+
+// * GET data nama dan nim user
 Route::get('usernim', [UserController::class, 'user_nim']);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
