@@ -44,8 +44,7 @@ php artisan serve
 ## API Endpoint
 
 1. **POST /absen**
-----
-Mengirim data NIM dan status absensi ketika wajah mahasiswa berhasil dideteksi.
+  Mengirim data NIM dan status absensi ketika wajah mahasiswa berhasil dideteksi.
 
 * **Method**
 
@@ -71,8 +70,7 @@ POST /absen
     ```
 
 2. **GET /usernim**
-----
-Mengambil seluruh data nama dan nim dari user.
+  Mengambil seluruh data nama dan nim dari user.
 
 * **Method**
 
@@ -82,7 +80,7 @@ GET /usernim
 
 * **Data Params**
 
-None
+  None
 
 * **Response**
   * **Code:** 200
